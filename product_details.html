@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+
+    <style>
+         :root {
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body{
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .product-detail {
+            position: absolute;
+            right: 0;
+            width: 360px;
+            padding-bottom: 24px;
+        }
+        .product-detail-close {
+            position: absolute;
+            z-index: 2;
+            top: 12px;
+            left: 12px;
+            width: 14px;
+            height: 14px;
+            padding: 12px;
+            background-color: var(--white);
+            border-radius: 50%;
+        }
+        .product-detail-close:hover {
+            cursor: pointer ;
+        }
+        .product-detail > img {
+            width: 360px;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 0  0  20px 20px;
+        }
+        .product-info {
+            margin: 24px 24px 0 24px;
+        }
+        .product-info p:first-of-type {
+            margin-top: 0;
+            margin-bottom: 4px;
+            font-weight: bold;
+            font-size: var(--md);
+        }
+        .product-info p:nth-of-type(2){
+            margin-top: 0;
+            margin-bottom: 36px;
+            font-size: var(--md);
+            color: var(--very-light-pink);
+        }
+        .product-info p:last-of-type {
+            margin-top: 0;
+            margin-bottom: 36px;
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+        }
+        .primary-button{
+            width: 300px;
+            height: 50px;
+            font-size: var(--md);
+            font-weight: bold;
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+        }
+        .add-to-cart-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 640px) {
+            .product-detail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+        <div class="product-detail-close">
+            <img src="./icons/icon_close.png" alt="">
+        </div>
+        <img src="https://images.pexels.com/photos/611229/bike-pink-paris-bicycle-611229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike">
+        <div class="product-info">
+            <p>$35.00</p>
+            <p>Bike</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid obcaecati, officia in eius dolorem, similique sunt doloremque rerum molestiae fugiat optio dolore animi aliquam! Iusto quisquam veritatis odit ex sed.</p>
+            <button class="primary-button add-to-cart-button">
+                <img src="./icons/bt_add_to_cart.svg" alt="">
+                add to cart
+            </button>
+        </div>
+    </aside>
+</body>
+</html>
